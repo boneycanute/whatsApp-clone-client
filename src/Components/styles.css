@@ -1,0 +1,161 @@
+/* Sidebar CSS */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.sidebar-container {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dddedd;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f2f5;
+  padding: 10px 16px;
+  border-top-left-radius: 20px;
+}
+
+.icon {
+  color: #54656f;
+  transform: scale(1.5);
+  padding: 8px;
+}
+
+.Search {
+  padding: 10px 16px;
+  background-color: white;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 20px;
+}
+
+.inputBox {
+  border: none;
+  background-color: #f0f2f5;
+  outline-width: 0px;
+  padding-left: 20px;
+  /* No rectangular highlight */
+}
+
+.Conversations {
+  height: 100%;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+}
+
+.group {
+  background-color: #dfe5e7;
+  border-radius: 50%;
+  color: white;
+}
+
+.sideBarItem-container {
+  border-top: 1px solid #dfe5e7;
+  border-bottom: 1px solid #dfe5e7;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.sideBarItem-container:hover {
+  background-color: #f0f2f5;
+}
+
+.sideBarItem-container:active {
+  background-color: #dfe5e7;
+}
+
+.group-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfe5e7;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.line-one {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.info-elements {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.group-name {
+  font-size: 17px;
+}
+
+.last-seen {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.last-message {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+/* Chat-container CSS */
+
+.chat-container {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f2f5;
+  padding: 10px 16px;
+  border-top-right-radius: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.group-icon2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfe5e7;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.group-name2 {
+  font-size: 17px;
+}
+
+.text-area {
+  background-image: url(../images/9406224_26669.jpg);
+  flex: 1;
+}
+
+.input-box {
+  flex: 1;
+}
