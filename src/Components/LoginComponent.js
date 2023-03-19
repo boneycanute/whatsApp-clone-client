@@ -20,7 +20,7 @@ function LoginComponent() {
       />
       <button
         onClick={() => {
-          nav("/chat");
+          nav("/app/welcome");
         }}
         className="enter-button"
       >

@@ -1,35 +1,56 @@
 import React from "react";
 import "./styles.css";
 import GroupsIcon from "@mui/icons-material/Groups";
-import DonutLargeIcon from "@mui/icons-material/DonutLarge";
-import ChatIcon from "@mui/icons-material/Chat";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+import PersonIcon from "@mui/icons-material/Person";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton } from "@mui/material";
 import SideBarItem from "./SideBarItem";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
   return (
     <div className="sidebar-container">
       <div className="Header">
         <div className="avatar">
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              navigate("/app/welcome");
+            }}
+          >
             <AccountCircleIcon className="icon left" />
           </IconButton>
         </div>
         <div className="other-options">
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              navigate("/app/currentUsers");
+            }}
+          >
+            <PersonIcon className="icon" />
+          </IconButton>
+
+          <IconButton
+            onClick={() => {
+              navigate("/app/chat");
+            }}
+          >
             <GroupsIcon className="icon" />
           </IconButton>
-          <IconButton>
-            <DonutLargeIcon className="icon" />
+
+          <IconButton
+            onClick={() => {
+              navigate("/app/addGroup");
+            }}
+          >
+            <AddBoxIcon className="icon" />
           </IconButton>
+
           <IconButton>
-            <ChatIcon className="icon" />
-          </IconButton>
-          <IconButton>
-            <MoreVertIcon className="icon" />
+            <DarkModeIcon className="icon" />
           </IconButton>
         </div>
       </div>

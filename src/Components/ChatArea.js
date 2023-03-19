@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles.css";
 import SearchIcon from "@mui/icons-material/Search";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import { IconButton } from "@mui/material";
 import UserMessage from "./UserMessage";
 import OthersMessage from "./OthersMessage";
+import EditIcon from "@mui/icons-material/Edit";
 
 function ChatArea({ props }) {
   return (
@@ -22,7 +22,7 @@ function ChatArea({ props }) {
             <SearchIcon className="icon" />
           </IconButton>
           <IconButton>
-            <MoreVertIcon className="icon" />
+            <EditIcon className="icon" />
           </IconButton>
         </div>
       </div>
