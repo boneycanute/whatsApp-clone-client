@@ -245,3 +245,42 @@
   margin: 0;
   margin-right: 10px;
 }
+
+.login-container {
+  background-color: #dfe5e7;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.logo {
+  height: 10vh;
+  width: 10vw;
+}
+
+.chat-name-input {
+  padding: 0;
+  padding-left: 10px;
+  border: none;
+  outline-width: 0px;
+  background-color: #dfe5e7;
+  font-size: 5vw;
+}
+
+.enter-button {
+  font-size: 5vw;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  color: #dfe5e7;
+  background-color: #00a884;
+}
+
+.enter-button:hover {
+  background-color: #25ba9a;
+}

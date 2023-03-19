@@ -42,6 +42,34 @@ function ChatArea({ props }) {
             timestamp: "2:00",
           }}
         />
+        <UserMessage
+          props={{
+            name: "User1",
+            message: "Dummy Message #1",
+            timestamp: "12:00",
+          }}
+        />
+        <OthersMessage
+          props={{
+            name: "User1",
+            message: "Dummy Message #2",
+            timestamp: "2:00",
+          }}
+        />
+        <UserMessage
+          props={{
+            name: "User1",
+            message: "Dummy Message #1",
+            timestamp: "12:00",
+          }}
+        />
+        <OthersMessage
+          props={{
+            name: "User1",
+            message: "Dummy Message #2",
+            timestamp: "2:00",
+          }}
+        />
       </div>
 
       <div className="chat-header bottom-right">
