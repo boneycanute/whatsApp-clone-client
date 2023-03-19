@@ -10,7 +10,7 @@ import { IconButton } from "@mui/material";
 function ChatArea({ props }) {
   return (
     <div className="chat-container">
-      <div className="chat-header">
+      <div className="chat-header top-right">
         <div className="flex">
           <h1 className="group-icon2">{props.groupName[0]}</h1>
           <h1 className="group-name2">{props.groupName}</h1>
@@ -25,19 +25,19 @@ function ChatArea({ props }) {
         </div>
       </div>
       <div className="text-area"></div>
-      <div className="chat-header">
-        <div className="flex">
-          <IconButton>
-            <SentimentVerySatisfiedIcon className="icon" />
-          </IconButton>
-          <IconButton>
-            <AttachFileIcon className="icon" />
-          </IconButton>
+      <div className="chat-header bottom-right">
+        <IconButton>
+          <SentimentVerySatisfiedIcon className="icon" />
+        </IconButton>
+        <IconButton>
+          <AttachFileIcon className="icon" />
+        </IconButton>
+        <div className="input-box-container">
           <input class="input-box" placeholder="Type a Message" />
-          <IconButton>
-            <KeyboardVoiceIcon className="icon" />
-          </IconButton>
         </div>
+        <IconButton>
+          <KeyboardVoiceIcon className="icon" />
+        </IconButton>
       </div>
     </div>
   );
