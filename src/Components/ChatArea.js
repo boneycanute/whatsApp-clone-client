@@ -6,6 +6,8 @@ import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfi
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import { IconButton } from "@mui/material";
+import UserMessage from "./UserMessage";
+import OthersMessage from "./OthersMessage";
 
 function ChatArea({ props }) {
   return (
@@ -24,7 +26,24 @@ function ChatArea({ props }) {
           </IconButton>
         </div>
       </div>
-      <div className="text-area"></div>
+
+      <div className="text-area">
+        <UserMessage
+          props={{
+            name: "User1",
+            message: "Dummy Message #1",
+            timestamp: "12:00",
+          }}
+        />
+        <OthersMessage
+          props={{
+            name: "User1",
+            message: "Dummy Message #2",
+            timestamp: "2:00",
+          }}
+        />
+      </div>
+
       <div className="chat-header bottom-right">
         <IconButton>
           <SentimentVerySatisfiedIcon className="icon" />
@@ -33,7 +52,7 @@ function ChatArea({ props }) {
           <AttachFileIcon className="icon" />
         </IconButton>
         <div className="input-box-container">
-          <input class="input-box" placeholder="Type a Message" />
+          <input className="input-box" placeholder="Type a Message" />
         </div>
         <IconButton>
           <KeyboardVoiceIcon className="icon" />
