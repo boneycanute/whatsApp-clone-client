@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
@@ -6,11 +6,13 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
-import { IconButton } from "@mui/material";
+import { IconButton, ToggleButton } from "@mui/material";
 import SideBarItem from "./SideBarItem";
 import { useNavigate } from "react-router-dom";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 function Sidebar() {
+  const [lightTheme, setLightTheme] = useState(true);
   const navigate = useNavigate();
   return (
     <div className="sidebar-container">
@@ -49,8 +51,14 @@ function Sidebar() {
             <AddBoxIcon className="icon" />
           </IconButton>
 
-          <IconButton>
-            <DarkModeIcon className="icon" />
+          <IconButton
+            onClick={() => {
+              setLightTheme(!lightTheme);
+              console.log(lightTheme);
+            }}
+          >
+            {lightTheme == false && <DarkModeIcon className="icon" />}
+            {lightTheme == true && <LightModeIcon className="icon" />}
           </IconButton>
         </div>
       </div>
