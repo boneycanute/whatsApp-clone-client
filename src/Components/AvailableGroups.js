@@ -4,21 +4,21 @@ import "./styles.css";
 
 function OnlineUsers() {
   const nav = useNavigate();
-  const [names, setNames] = useState([
+  const [groups, setGroups] = useState([
     {
-      name: "Test Person 1",
+      name: "Test Group 1",
       count: "23",
     },
     {
-      name: "Test Person 2",
+      name: "Test Group 2",
       count: 2,
     },
   ]);
   return (
     <div className="onlineUsersContainer">
       <div className="availGroupContainer">
-        <div className="title-text margin-bottom">Online Users</div>
-        {names.map((value) => {
+        <div className="title-text margin-bottom">Available Groups</div>
+        {groups.map((value) => {
           return (
             <div className="groupList-container align-items-start">
               <h1 className="group-icon">{value.name[0]}</h1>
@@ -29,7 +29,7 @@ function OnlineUsers() {
                 }}
                 className="join-group-button"
               >
-                Chat
+                Join
               </button>
             </div>
           );

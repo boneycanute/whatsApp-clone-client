@@ -35,7 +35,7 @@ function Sidebar() {
 
           <IconButton
             onClick={() => {
-              navigate("/app/chat");
+              navigate("/app/available-groups");
             }}
           >
             <GroupsIcon className="icon" />

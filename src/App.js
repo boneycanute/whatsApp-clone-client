@@ -8,6 +8,7 @@ import WelcomePage from "./Components/WelcomePage";
 import ChatArea from "./Components/ChatArea";
 import OnlineUsers from "./Components/OnlineUsers";
 import CreateGroup from "./Components/CreateGroup";
+import AvailableGroups from "./Components/AvailableGroups";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             element={<ChatArea props={{ groupName: "GroupName" }} />}
           />
           <Route path="currentUsers" element={<OnlineUsers />} />
-
+          <Route path="available-groups" element={<AvailableGroups />} />
           <Route path="addGroup" element={<CreateGroup />} />
         </Route>
       </Routes>
