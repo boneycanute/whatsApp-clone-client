@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 function OnlineUsers() {
   const nav = useNavigate();
+  const theme = useSelector((state) => state.theme.value);
+
   const [groups, setGroups] = useState([
     {
       name: "Test Group 1",
@@ -15,8 +18,8 @@ function OnlineUsers() {
     },
   ]);
   return (
-    <div className="onlineUsersContainer">
-      <div className="availGroupContainer">
+    <div className={"onlineUsersContainer" + theme}>
+      <div className={"availGroupContainer" + theme}>
         <div className="title-text margin-bottom">Available Groups</div>
         {groups.map((value) => {
           return (

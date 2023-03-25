@@ -6,17 +6,23 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
-import { IconButton, ToggleButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import SideBarItem from "./SideBarItem";
 import { useNavigate } from "react-router-dom";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../Features/themeSlice";
+import { ThreeMp } from "@mui/icons-material";
 
 function Sidebar() {
-  const [lightTheme, setLightTheme] = useState(true);
+  const theme = useSelector((state) => state.theme.value);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  // console.log(theme);
   return (
     <div className="sidebar-container">
-      <div className="Header">
+      <div className={"Header" + theme}>
         <div className="avatar">
           <IconButton
             onClick={() => {
@@ -53,17 +59,18 @@ function Sidebar() {
 
           <IconButton
             onClick={() => {
-              setLightTheme(!lightTheme);
-              console.log(lightTheme);
+              // console.log("Previous Theme : ", theme);
+              dispatch(toggleTheme());
+              // console.log("Current Theme Theme : ", theme);
             }}
           >
-            {lightTheme == false && <DarkModeIcon className="icon" />}
-            {lightTheme == true && <LightModeIcon className="icon" />}
+            {theme === "-light" && <DarkModeIcon className="icon" />}
+            {theme === "-dark" && <LightModeIcon className="icon" />}
           </IconButton>
         </div>
       </div>
-      <div className="Search">
-        <div className="search-container">
+      <div className={"Search" + theme}>
+        <div className={"search-container" + theme}>
           <SearchIcon className="icon" />
           <input
             placeholder="Search or start a new chat"
@@ -71,7 +78,7 @@ function Sidebar() {
           />
         </div>
       </div>
-      <div className="Conversations">
+      <div className={"Conversations" + theme}>
         <SideBarItem
           props={{
             image: "",

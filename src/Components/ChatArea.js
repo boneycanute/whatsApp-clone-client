@@ -8,14 +8,16 @@ import { IconButton } from "@mui/material";
 import UserMessage from "./UserMessage";
 import OthersMessage from "./OthersMessage";
 import EditIcon from "@mui/icons-material/Edit";
+import { useSelector } from "react-redux";
 
 function ChatArea({ props }) {
+  const theme = useSelector((state) => state.theme.value);
   return (
     <div className="chat-container">
-      <div className="chat-header top-right">
+      <div className={"chat-header" + theme + " top-right"}>
         <div className="flex">
           <h1 className="group-icon2">{props.groupName[0]}</h1>
-          <h1 className="group-name2">{props.groupName}</h1>
+          <h1 className={"group-name2" + theme}>{props.groupName}</h1>
         </div>
         <div>
           <IconButton>
@@ -27,7 +29,7 @@ function ChatArea({ props }) {
         </div>
       </div>
 
-      <div className="text-area">
+      <div className={"text-area" + theme}>
         <UserMessage
           props={{
             name: "User1",
@@ -72,7 +74,7 @@ function ChatArea({ props }) {
         />
       </div>
 
-      <div className="chat-header bottom-right">
+      <div className={"chat-header" + theme + " bottom-right"}>
         <IconButton>
           <SentimentVerySatisfiedIcon className="icon" />
         </IconButton>

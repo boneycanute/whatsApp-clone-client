@@ -10,9 +10,13 @@ import OnlineUsers from "./Components/OnlineUsers";
 import CreateGroup from "./Components/CreateGroup";
 import AvailableGroups from "./Components/AvailableGroups";
 
+import { useSelector } from "react-redux";
+
 function App() {
+  const theme = useSelector((state) => state.theme.value);
+  console.log(theme);
   return (
-    <div className="App">
+    <div className={"App" + theme}>
       <Routes>
         <Route path="/" element={<LoginComponent />} />
         <Route path="app" element={<ChatApp />}>

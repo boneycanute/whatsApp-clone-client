@@ -1,12 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function CreateGroup() {
+  const theme = useSelector((state) => state.theme.value);
   const nav = useNavigate();
   return (
-    <div className="createGroup-container">
-      <div className="groupInputContainer">
-        <input placeholder="Enter Group Name" className="group-name-input " />
+    <div className={"createGroup-container" + theme}>
+      <div className={"groupInputContainer" + theme}>
+        <input
+          placeholder="Enter Group Name"
+          className={"group-name-input" + theme}
+        />
         <button
           onClick={() => {
             nav("/app/welcome");

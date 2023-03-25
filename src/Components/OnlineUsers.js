@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 function OnlineUsers() {
+  const theme = useSelector((state) => state.theme.value);
   const nav = useNavigate();
   const [names, setNames] = useState([
     {
@@ -15,8 +17,8 @@ function OnlineUsers() {
     },
   ]);
   return (
-    <div className="onlineUsersContainer">
-      <div className="availGroupContainer">
+    <div className={"onlineUsersContainer" + theme}>
+      <div className={"availGroupContainer" + theme}>
         <div className="title-text margin-bottom">Online Users</div>
         {names.map((value) => {
           return (
@@ -25,7 +27,7 @@ function OnlineUsers() {
               <h1 className="title-text margin-left">{value.name}</h1>
               <button
                 onClick={() => {
-                  nav("/app/welcome");
+                  nav("/app/chat");
                 }}
                 className="join-group-button"
               >

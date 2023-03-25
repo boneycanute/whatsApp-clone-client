@@ -1,10 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Logo from "../images/whatsapp-svgrepo-com.svg";
 import "./styles.css";
 
 function WelcomePage() {
+  const theme = useSelector((state) => state.theme.value);
   return (
-    <div className="welcome-contaioner">
+    <div className={"welcome-contaioner" + theme}>
       <img src={Logo} alt="Logo" className="logo2" />
       <h1 className="welcomeText">Who'sApp</h1>
       <p className="welcomeParagraph">
